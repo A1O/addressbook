@@ -20,14 +20,13 @@ blocks:
             - cache restore
             - npm install
             - cache store
-  - name: Lint with ESlint
+  - name: Static test
     task:
       jobs:
         - name: Run ESLint
           commands:
             - npm run lint
-        - name: Unit test
-  - name: Test with Jest
+  - name: Unit test
     task:
       - jobs:
           - name: Run Jest
