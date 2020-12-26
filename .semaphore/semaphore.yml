@@ -24,11 +24,13 @@ blocks:
   - name: Lint with ESlint
     task:
       jobs:
+        - name: Run ESLint
           commands:
             - npm run lint
         - name: Unit test
   - name: Test with Jest
     task:
       - jobs:
-          commands:
-            - npm run test
+          - name: Run Jest
+            commands:
+              - npm run test
