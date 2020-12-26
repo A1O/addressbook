@@ -4,6 +4,9 @@ agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+global_job_config:
+  secrets:
+    - name: env-production
 blocks:
   - name: Install dependencies
     task:
@@ -25,6 +28,7 @@ blocks:
       prologue:
         commands:
           - checkout
+          - nvm use
           - cache restore
       jobs:
         - name: Run ESLint
@@ -35,6 +39,7 @@ blocks:
       prologue:
         commands:
           - checkout
+          - nvm use
           - cache restore
       jobs:
         - name: Run Jest
