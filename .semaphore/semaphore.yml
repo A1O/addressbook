@@ -21,8 +21,14 @@ blocks:
             - npm install
             - cache store
         - name: Static test
+  - name: Lint with ESlint
+    task:
+      jobs:
           commands:
             - npm run lint
         - name: Unit test
+  - name: Test with Jest
+    task:
+      - jobs:
           commands:
             - npm run test
