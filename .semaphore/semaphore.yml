@@ -22,12 +22,20 @@ blocks:
             - cache store
   - name: Static test
     task:
+      prologue:
+        commands:
+          - checkout
+          - cache restore
       jobs:
         - name: Run ESLint
           commands:
             - npm run lint
   - name: Unit test
     task:
+      prologue:
+        commands:
+          - checkout
+          - cache restore
       jobs:
         - name: Run Jest
           commands:
