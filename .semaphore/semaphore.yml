@@ -8,7 +8,7 @@ blocks:
   - name: Install dependencies
     task:
       env_vars:
-        -name: NODE_ENV
+        - name: NODE_ENV
           value: test
       prologue:
         commands:
