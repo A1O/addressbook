@@ -20,7 +20,6 @@ blocks:
             - cache restore
             - npm install
             - cache store
-        - name: Static test
   - name: Lint with ESlint
     task:
       jobs:
