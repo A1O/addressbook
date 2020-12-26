@@ -28,7 +28,7 @@ blocks:
             - npm run lint
   - name: Unit test
     task:
-      - jobs:
-          - name: Run Jest
-            commands:
-              - npm run test
+      jobs:
+        - name: Run Jest
+          commands:
+            - npm run test
