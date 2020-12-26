@@ -6,4 +6,9 @@ Source code for [this](https://www.digitalocean.com/community/tutorials/how-to-b
 
 # Dev logs
 
+To run the project:
+
+1. clone this git repository
+2. copy `env.sample.txt` to `.env`
+3. update `.env` with credentials for PostgresDB
 
