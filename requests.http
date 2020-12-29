@@ -32,3 +32,12 @@ Content-Type: application/x-www-form-urlencoded
 firstName=User3fn
 &lastName=User3ln
 &id=3
+
+
+###
+PUT {{url}}/person
+Content-Type: application/x-www-form-urlencoded
+
+firstName=User4fn
+&lastName=User4ln
+&id=4

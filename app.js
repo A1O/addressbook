@@ -1,5 +1,6 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+require('dotenv').config()
 
 var db = require('./database')
 var app = express();
@@ -59,5 +60,6 @@ app.use(function (req, res) {
 })
 
 var server = app.listen(process.env.PORT || 3000, function () {
+    console.log(`portas: ${process.env.PORT} db_host: ${process.env.DB_HOST}`)
     console.log("app is running on port", server.address().port);
 })

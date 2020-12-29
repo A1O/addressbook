@@ -43,12 +43,13 @@ blocks:
           - checkout
           - nvm use
           - cache restore
+          - sem-service start postgres --username=addressbook_user --password=example --db=addressbook_db
       jobs:
         - name: Run Jest
           commands:
             - npm run test
 promotions:
-  - name: Promotion 1
-    pipeline_file: pipeline_2.yml
+  - name: Dockerize
+    pipeline_file: docker-build.yml
     auto_promote:
       when: branch = 'master' AND result = 'passed'
