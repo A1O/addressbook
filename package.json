@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "node app.js",
-    "lint": "eslint app.js database.js migrate.js"
+    "lint": "eslint app.js database.js migrate.js",
+    "migrate": "node migrate.js"
   },
   "repository": {
     "type": "git",
